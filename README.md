@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎬 Movies Website
 
 A modern Movies Website built using HTML, CSS, JavaScript, Node.js, Express.js, and MySQL.
@@ -100,3 +101,6 @@ movie-project/
 │
 └── README.md
 ```
+=======
+# movie-project
+>>>>>>> c9287eedddef9457b9875e7d0ab88fda6e02dac3
