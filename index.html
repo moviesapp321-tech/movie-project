@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Streaming Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="index.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <button id="menu-toggle" type="button">☰</button>
+
+      <div class="logo">🎬 My Movie Streaming</div>
+
+      <nav id="navbar">
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#movies">Movies</a>
+          <a href="#favorites">Favorites</a>
+          <a href="#users">Users</a>
+          <a href="#subscriptions">Subscriptions</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+
+        <div class="nav-buttons">
+          <a href="login.html" id="login-btn">🔐 Login</a>
+          <button id="logout-btn" type="button">Logout</button>
+          <button id="theme-toggle" type="button">🌙 Dark Mode</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <h2 class="hero-title">Welcome to Movie World</h2>
+      <p>Stream your favorite movies anytime, anywhere.</p>
+
+      <div class="hero-buttons">
+        <button id="browse-btn" type="button">Browse Movies</button>
+        <button id="users-btn" type="button">View Users</button>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls-section">
+      <h2>Find Your Movie</h2>
+      <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search movies..." />
+        <select id="genreFilter"></select>
+      </div>
+    </section>
+
+    <!-- Movies -->
+    <section id="movies" class="movies">
+      <h2>Available Movies</h2>
+      <div id="movie-list" class="movie-list"></div>
+    </section>
+
+    <!-- Favorites -->
+    <section id="favorites" class="favorites">
+      <h2>Favorite Movies</h2>
+      <div id="favorite-list" class="movie-list"></div>
+    </section>
+
+    <!-- Users -->
+    <section id="users" class="users">
+      <h2>Registered Users</h2>
+      <div id="user-list" class="user-list"></div>
+    </section>
+
+    <!-- Subscriptions -->
+    <section id="subscriptions" class="subscriptions">
+      <h2>Subscriptions</h2>
+      <div class="subscription-list">
+        <div class="subscription-card">
+          <h3>Free</h3>
+          <p>Limited access to movies</p>
+        </div>
+        <div class="subscription-card">
+          <h3>Premium</h3>
+          <p>Watch HD movies with no ads</p>
+        </div>
+        <div class="subscription-card">
+          <h3>VIP</h3>
+          <p>Unlimited movies + early access</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews">
+      <h2>User Reviews</h2>
+      <div id="review-list" class="review-list"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 My Movie Streaming. All rights reserved.</p>
+      <p>@ Created by Hosters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--  node server.js -->

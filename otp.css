@@ -1,0 +1,366 @@
+/* ================================
+   OTP VERIFICATION PAGE
+   Movie Website Theme
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(229, 9, 20, 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 80, 80, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #050505, #111111 50%, #080808);
+
+  overflow: hidden;
+}
+
+/* Background glow */
+body::before {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: rgba(229, 9, 20, 0.18);
+  filter: blur(100px);
+  border-radius: 50%;
+  top: -120px;
+  left: -100px;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 50, 50, 0.12);
+  filter: blur(100px);
+  border-radius: 50%;
+  bottom: -120px;
+  right: -80px;
+  pointer-events: none;
+}
+
+/* Main container */
+.otp-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* OTP Card */
+.otp-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 42px 35px;
+
+  background: rgba(20, 20, 20, 0.88);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(229, 9, 20, 0.12);
+
+  backdrop-filter: blur(15px);
+
+  text-align: center;
+
+  animation: cardAppear 0.6s ease;
+}
+
+/* Card animation */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Movie Website title */
+.otp-card h1 {
+  font-size: 28px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+  color: #ffffff;
+}
+
+/* Red movie icon/title accent */
+.otp-card h1::first-letter {
+  color: #e50914;
+}
+
+/* Verify OTP heading */
+.otp-card h2 {
+  font-size: 30px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+}
+
+/* Description */
+.message {
+  color: #a8a8a8;
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  margin-bottom: 8px;
+}
+
+/* Email */
+.email {
+  min-height: 22px;
+
+  color: #e50914;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 28px;
+
+  word-break: break-word;
+}
+
+/* Form */
+#otp-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Label */
+#otp-form label {
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+  color: #dddddd;
+}
+
+/* OTP Input */
+#otp {
+  width: 100%;
+
+  height: 58px;
+
+  padding: 0 18px;
+
+  border-radius: 12px;
+
+  border: 1px solid #333333;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  letter-spacing: 8px;
+
+  text-align: center;
+
+  transition: 0.25s ease;
+}
+
+/* Input placeholder */
+#otp::placeholder {
+  color: #666666;
+
+  font-size: 14px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Input focus */
+#otp:focus {
+  border-color: #e50914;
+
+  box-shadow:
+    0 0 0 3px rgba(229, 9, 20, 0.12),
+    0 0 20px rgba(229, 9, 20, 0.15);
+
+  background: #151515;
+}
+
+/* Verify button */
+#verify-btn {
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #e50914, #b20710);
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.22);
+}
+
+/* Button hover */
+#verify-btn:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(135deg, #ff1a25, #e50914);
+
+  box-shadow: 0 12px 28px rgba(229, 9, 20, 0.35);
+}
+
+/* Button click */
+#verify-btn:active {
+  transform: translateY(0);
+}
+
+/* Status message */
+#status-message {
+  min-height: 22px;
+
+  margin-top: 18px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: center;
+
+  transition: 0.3s ease;
+}
+
+/* Back button */
+.back-btn {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid #333333;
+
+  background: transparent;
+
+  color: #aaaaaa;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* Back hover */
+.back-btn:hover {
+  color: #ffffff;
+
+  border-color: #555555;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 500px) {
+  .otp-container {
+    padding: 15px;
+  }
+
+  .otp-card {
+    padding: 32px 22px;
+
+    border-radius: 18px;
+  }
+
+  .otp-card h1 {
+    font-size: 24px;
+  }
+
+  .otp-card h2 {
+    font-size: 26px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  #otp {
+    height: 55px;
+
+    font-size: 21px;
+
+    letter-spacing: 6px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 350px) {
+  .otp-card {
+    padding: 28px 18px;
+  }
+
+  .otp-card h1 {
+    font-size: 22px;
+  }
+
+  .otp-card h2 {
+    font-size: 24px;
+  }
+
+  #otp {
+    letter-spacing: 4px;
+  }
+}

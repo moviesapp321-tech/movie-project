@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="shortcut icon" href="admin.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1>🛠 Admin Panel</h1>
+      <div class="header-buttons">
+        <a href="index.html">⬅ Back to Home</a>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <section class="stats-section">
+      <div class="stat-card">
+        <h3>Total Registered Users</h3>
+        <p id="total-users">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Logins</h3>
+        <p id="total-logins">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Watched Movies</h3>
+        <p id="total-watches">0</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Registered Users</h2>
+      </div>
+      <div id="registered-users" class="admin-grid"></div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Login History</h2>
+        <button id="clearLoginHistory">Clear Login History</button>
+      </div>
+      <div id="login-history" class="admin-grid"></div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Watch History</h2>
+        <button id="clearWatchHistory">Clear Watch History</button>
+      </div>
+      <div id="watch-history" class="admin-grid"></div>
+    </section>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
+
+<!-- admin@gmail.com, 12345 -->
