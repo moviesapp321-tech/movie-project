@@ -104,3 +104,11 @@ movie-project/
 =======
 # movie-project
 >>>>>>> c9287eedddef9457b9875e7d0ab88fda6e02dac3
+
+
+## 👨‍💻 Author
+
+**Meet Chauhan**
+
+*Main ID:-*
+GitHub: [@chauhanmeet456-code](https://github.com/chauhanmeet456-code)
