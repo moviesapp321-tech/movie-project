@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🎬 Movies Website
 
 A modern Movies Website built using HTML, CSS, JavaScript, Node.js, Express.js, and MySQL.
